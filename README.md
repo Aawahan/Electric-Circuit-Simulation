@@ -116,9 +116,3 @@ The simulator aims to become a powerful platform for:
 - 👨‍🏫 Educators demonstrating electronic concepts
 - 🔬 Hobbyists experimenting with circuit designs
 - 💻 Engineers requiring lightweight browser-based simulations
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
