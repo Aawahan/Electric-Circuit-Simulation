@@ -1,35 +1,124 @@
-# Electric-Circuit-Simulation
+# ⚡ Project Title: [Your Project Name]
 
-A browser-native, interactive electronic circuit simulator built from scratch using Modified Nodal Analysis (MNA).
-# 🚀 Project Overview
-This project aims to build a lightweight yet high-precision circuit simulation engine using the standard web stack. By leveraging the HTML5 Canvas API for schematic capture and Vanilla JavaScript for the numerical solver, this tool provides real-time visualization of electrical behavior without the need for external software or Java plugins.
-The project follows a phased approach, starting with linear passive components (resistors, capacitors) and ideal sources, eventually expanding to complex nonlinear devices.
+**A Browser-Native, Interactive Electronic Circuit Simulator built with Vanilla JavaScript and HTML5 Canvas.**
 
-# 🛠 Core Tech Stack
-HTML5 Canvas: Used for the interactive schematic editor, supporting component placement and real-time "moving yellow dots" to represent current flow.
-CSS3: For a responsive UI, toolbar styling, and professional-grade oscilloscope-like data panels.
-JavaScript (ES6+):
-The Engine: A custom matrix solver implementing Modified Nodal Analysis (MNA) to handle both voltage and current constraints.
-Numerical Methods: Employs LU Decomposition with Partial Pivoting for stable linear equation solving and Trapezoidal Rule integration for transient analysis.
+---
 
-# ✨ Key Features (Initial Phase)
-Interactive Schematic Capture:
-Drag-and-Drop: Native JS implementation for dragging components and wires over the canvas using hit-testing via context.isPointInPath.
-Dynamic Editing: Right-click menus to modify component properties (e.g., resistance, voltage) on the fly.
-Real-Time Simulation:
-DC Operating Point: Solves for node voltages and branch currents in steady-state using MNA.
-Transient Analysis: Provides a time-varying definition of voltage/current across any point in the circuit.
-Virtual Oscilloscope: Integrated graphs showing time-domain waveforms for selected nodes or components.
+## 🚀 Synopsis
 
-# ⚙️ How it Works (Starting Logic)
-Topological Mapping: The simulator uses Union-Find node detection to identify connections and map the physical circuit to a system matrix.
-Matrix Assembly: For every node k, the engine writes a Kirchhoff’s Current Law (KCL) equation. It systematically builds the G (conductance) and B (voltage incidence) matrices to form the standard MNA equation: 
-[ G  B^T ] [ V ] = [ V ]
-[ B   0  ] [ I ]   [ I ]
-Numerical Integration: To simulate capacitors and inductors, the engine uses Direct Discretization (Backward Euler or Trapezoidal Rule) to convert differential equations into solvable algebraic systems at every time step.
+This project is a **high-precision, interactive electronic circuit simulator** designed for circuit design, verification, and educational visualization.
 
-# 🗺 Roadmap
-[x] Phase 1: Basic HTML/Canvas UI and linear DC solver (Resistors/Sources).
-[ ] Phase 2: Implement Transient Analysis using the Trapezoidal Rule.
-[ ] Phase 3: Nonlinear device support (Diodes/Transistors) using Newton-Raphson iteration.
-[ ] Phase 4: Advanced stability features like Gmin Stepping and Source Stepping.
+Unlike traditional circuit simulators that require plugins or dedicated desktop software, this application runs **entirely in the browser** using a custom-built numerical simulation engine developed from the ground up.
+
+The primary goal is to bridge the gap between **abstract circuit theory** and **intuitive visual learning**. By combining transistor-level circuit descriptions with modern web technologies, users can design, simulate, and monitor electronic circuits in real time.
+
+---
+
+## 🧠 Mathematical & Numerical Engine
+
+The simulator is built upon professional-grade circuit simulation techniques to ensure high accuracy and numerical stability.
+
+### **Modified Nodal Analysis (MNA)**
+- Automatically identifies circuit nodes.
+- Constructs the system matrix representing the circuit equations.
+- Solves for unknown node voltages and branch currents.
+
+### **Linear Solver**
+- Implements **LU Decomposition with Partial Pivoting**.
+- Ensures stable and efficient solutions for large circuit matrices.
+
+### **Transient Analysis**
+- Simulates time-varying circuit behavior.
+- Uses numerical integration methods such as:
+  - Trapezoidal Rule
+  - Backward Euler Method
+- Supports dynamic components including capacitors and inductors.
+
+---
+
+## ✨ Key Features (Initial Phase)
+
+### 🎨 Interactive Schematic Capture
+- Native HTML5 Canvas interface.
+- Drag-and-drop component placement.
+- Easy wire creation and editing.
+
+### ⚡ Real-Time Visualization
+- Animated current flow using moving particles.
+- Color-coded voltage representation.
+- Instant visual feedback during simulation.
+
+### 🔌 Component Library
+Initial support includes:
+
+- Resistors
+- Capacitors
+- Ideal Voltage Sources
+
+### 📈 Virtual Oscilloscope
+- Built-in waveform viewer.
+- Monitor voltage and current at any circuit node.
+- Real-time time-domain plotting.
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- HTML5 (Canvas API)
+- CSS3 (Responsive UI)
+
+### Programming Language
+- Vanilla JavaScript (ES6+)
+
+### Simulation Engine
+- Custom Mathematical Solver
+- Event-Driven Architecture
+
+### Data Structures
+- JSON-based Circuit Netlists
+- Linked Lists (where applicable)
+- Compressed Column Matrix Storage for efficient matrix operations
+
+---
+
+## 🗺 Roadmap
+
+### ✅ Phase 1 — Core Simulator
+- Linear DC Solver
+- HTML5 Canvas Interface
+- Basic Component Library
+
+### 🔄 Phase 2 — Transient Simulation
+- Time-domain analysis
+- Capacitors & Inductors
+- Oscilloscope integration
+
+### 🚀 Phase 3 — Nonlinear Devices
+- Diodes
+- BJTs
+- MOSFETs
+- Newton-Raphson Iterative Solver
+
+### 🎓 Phase 4 — Educational Mode
+- "Matrix Mode"
+- Step-by-step Modified Nodal Analysis visualization
+- Interactive equation generation for learning purposes
+
+---
+
+## 🎯 Vision
+
+The long-term vision is to build a **fully browser-based electronic circuit simulator** that combines the accuracy of professional simulation software with an intuitive educational experience.
+
+The simulator aims to become a powerful platform for:
+- 🎓 Students learning circuit theory
+- 👨‍🏫 Educators demonstrating electronic concepts
+- 🔬 Hobbyists experimenting with circuit designs
+- 💻 Engineers requiring lightweight browser-based simulations
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
