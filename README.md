@@ -1,4 +1,4 @@
-# ⚡ Project Title: [Your Project Name]
+# ⚡ Project Title: Advanced Web-Based Electronic Circuit Simulation
 
 **A Browser-Native, Interactive Electronic Circuit Simulator built with Vanilla JavaScript and HTML5 Canvas.**
 
