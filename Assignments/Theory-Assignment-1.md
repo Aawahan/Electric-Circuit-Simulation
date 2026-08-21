@@ -1,5 +1,3 @@
-Frontend – Assignment 1
-
 Q1. Explain the HTTP Request–Response Cycle with a suitable diagram. Describe the major steps involved when a client (browser) requests a resource from a web server and receives a response.
 
 HTTP Request–Response Cycle is the process in which a browser sends a request to a web server and gets a response from it.
