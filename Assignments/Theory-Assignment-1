@@ -90,37 +90,28 @@ Example:
 
 Q5. What are semantic elements in HTML? Explain their importance in web development and provide suitable examples.
 
-Answer:
-
 Semantic elements are HTML elements whose names tell us about the type or purpose of their content.
 
 Examples:
-
 <header>
 <nav>
 <main>
 <section>
 <article>
 <footer>
-
 They are useful because they make the HTML code easier to understand and give a proper structure to the webpage. They also help search engines and accessibility tools understand the content better.
 
 
 Q6. Write HTML code to create the following table:
-
 Sr. No. | Name  | Designation | Department
 1       | John  | Manager     | Sales
 2       | Smith | Sr. Manager | Marketing
 3       | Jane  | Manager     | HR
-
 The table should include appropriate table headings, rows, and columns.
-
-Answer:
 
 <!DOCTYPE html>
 <html>
 <body>
-
 <table border="1">
     <tr>
         <th>Sr. No.</th>
@@ -128,21 +119,18 @@ Answer:
         <th>Designation</th>
         <th>Department</th>
     </tr>
-
     <tr>
         <td>1</td>
         <td>John</td>
         <td>Manager</td>
         <td>Sales</td>
     </tr>
-
     <tr>
         <td>2</td>
         <td>Smith</td>
         <td>Sr. Manager</td>
         <td>Marketing</td>
     </tr>
-
     <tr>
         <td>3</td>
         <td>Jane</td>
@@ -150,25 +138,20 @@ Answer:
         <td>HR</td>
     </tr>
 </table>
-
 </body>
 </html>
 
 
 Q7. Write HTML code to create the following list using an appropriate combination of ordered/unordered lists:
-
 River
     Ganga
     Yamuna
     Brahmaputra
     Narmada
 
-Answer:
-
 <!DOCTYPE html>
 <html>
 <body>
-
 <ul>
     <li>River
         <ul>
@@ -179,68 +162,44 @@ Answer:
         </ul>
     </li>
 </ul>
-
 </body>
 </html>
 
 
 Q8. Explain the different types of CSS used for applying styles to an HTML document. Describe each type with a suitable example.
 
-Answer:
-
 There are three types of CSS.
-
 1. Inline CSS
-
 It is written directly inside an HTML tag.
-
 Example:
-
 <p style="color: red;">Hello</p>
-
 2. Internal CSS
-
 It is written inside the <style> tag in the HTML file.
 
 Example:
-
 <style>
 p {
     color: blue;
 }
 </style>
-
 3. External CSS
-
 It is written in a separate CSS file and connected with the HTML file.
-
 HTML:
-
 <link rel="stylesheet" href="style.css">
-
 style.css:
-
 p {
     color: green;
 }
-
 External CSS is useful when the same styles are needed on multiple webpages.
 
 
 Q9. Differentiate between HTML, CSS, and JavaScript based on their role in developing a web page. Explain what each technology contributes to a website.
 
-Answer:
-
 HTML, CSS and JavaScript have different roles in a webpage.
-
 HTML is used for the structure of the webpage. It creates things like headings, paragraphs, images and buttons.
-
 CSS is used for the design of the webpage. It changes colors, fonts, sizes, spacing and layout.
-
 JavaScript is used for making the webpage interactive. It can respond to clicks, change content and perform different actions.
-
 In simple words:
-
 HTML = Structure
 CSS = Design
 JavaScript = Interaction
@@ -249,19 +208,10 @@ JavaScript = Interaction
 Q10. Answer the following:
 
 a. What is the role of Bootstrap in web development?
-
-Answer:
-
 Bootstrap is a frontend framework used to create responsive and good-looking websites easily. It provides ready-made classes and components such as buttons, forms, cards and navigation bars.
 
 b. What is jQuery and why was it widely used in web development?
-
-Answer:
-
 jQuery is a JavaScript library that makes common JavaScript tasks easier. It was widely used for DOM manipulation, event handling, animations and AJAX operations.
 
 c. What is React.js and what problem does it solve in frontend development?
-
-Answer:
-
 React.js is a JavaScript library used to build user interfaces. It helps developers create large and interactive webpages using reusable components. This makes frontend code easier to manage and reuse.
