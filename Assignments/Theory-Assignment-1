@@ -2,10 +2,7 @@ Frontend – Assignment 1
 
 Q1. Explain the HTTP Request–Response Cycle with a suitable diagram. Describe the major steps involved when a client (browser) requests a resource from a web server and receives a response.
 
-Answer:
-
 HTTP Request–Response Cycle is the process in which a browser sends a request to a web server and gets a response from it.
-
 Diagram:
 
 User
@@ -39,47 +36,28 @@ Q2. Briefly explain the purpose and key features of the following web technologi
 5. jQuery
 6. React.js
 
-Answer:
-
 1. HTML
-
 HTML stands for HyperText Markup Language. It is used to create the structure of a webpage. It is used for headings, paragraphs, images, links, tables, forms, etc.
-
 2. CSS
-
 CSS stands for Cascading Style Sheets. It is used to design a webpage. It controls colors, fonts, size, spacing and layout.
-
 3. JavaScript
-
 JavaScript is a programming language used to make webpages interactive. It can handle button clicks, change content and perform calculations.
-
 4. Bootstrap
-
 Bootstrap is a frontend framework. It provides ready-made styles and components like buttons, forms, cards and navigation bars. It also helps in making responsive websites.
-
 5. jQuery
-
 jQuery is a JavaScript library. It makes tasks like changing HTML elements, handling events and animations easier.
-
 6. React.js
-
 React.js is a JavaScript library used to create user interfaces. It uses reusable components and is useful for making interactive frontend applications.
 
 
 Q3. What are client-side technologies and server-side technologies? Explain the difference between them with suitable examples.
 
-Answer:
-
 Client-side technologies run mainly in the user's browser. They are used for the visible part of a website and user interaction.
-
 Examples: HTML, CSS, JavaScript and React.js.
-
 Server-side technologies run on the web server. They are used for processing requests, handling databases and other backend work.
-
 Examples: Node.js, PHP, Python and Java.
 
 Difference:
-
 Client-side:
 - Runs in the browser.
 - Handles the user interface.
@@ -94,11 +72,7 @@ Server-side:
 
 
 Q4. What are block-level elements in HTML? Explain their characteristics and provide at least three examples.
-
-Answer:
-
 Block-level elements are HTML elements that normally start from a new line and take the available width of their container.
-
 They are mainly used to create the structure of a webpage.
 
 Examples:
@@ -109,7 +83,6 @@ Examples:
 5. <article>
 
 Example:
-
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
 <div>This is a division.</div>
