@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Registration form</title>
+	</head>
+	<body>
+		<h1 align="center">Registration Form</h1>
+		<form>
+			<table border="1" align="center" cellspacing="0" cellpadding="5px">
+				<tr>
+                <td>
+					<label for="username"><strong>Username</strong></label>
+				</td>
+                <td><input type="text" id="username"/></td>
+            </tr>
+				<tr>
+					<td><strong>Email</strong></td>
+					<td> 
+						<label for="email">
+							<input type="email" id="email"/> 
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Password</strong></td>
+					<td> 
+						<label for="password">
+							<input type="password" id="password"/> 
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Gender</strong></td>
+					<td> 
+						<select name="gender" id="gender">
+							<option value="">Choose Gender</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Languages you know</strong></td>
+					<td> 
+						<label for="language1">
+							<input type="radio" id="language1"/>C++
+						</label>
+						<label for="language2">
+							<input type="radio" id="language2"/>Java
+						</label>
+						<label for="language3">
+							<input type="radio" id="language3"/>Python
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Description</strong></td>
+					<td>
+						<textarea rows="4" type="text" id="Description" ></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right"><button>Submit</button></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
