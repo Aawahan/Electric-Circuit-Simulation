@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dde6f5;
+        }
+        .box {
+            background-color: white;
+            width: 320px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-size: 14px;
+        }
+        input {
+            width: 95%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            display: block;
+            height: 15px;
+        }
+        #successMsg {
+            color: green;
+            text-align: center;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Sign Up</h2>
+
+        <form onsubmit="return validateForm()">
+
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <span class="error" id="nameError"></span>
+
+            <label>Email</label>
+            <input type="text" id="email" placeholder="Enter your email">
+            <span class="error" id="emailError"></span>
+
+            <label>Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter 10 digit number">
+            <span class="error" id="phoneError"></span>
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <span class="error" id="passwordError"></span>
+
+            <label>Confirm Password</label>
+            <input type="password" id="confirm" placeholder="Enter password again">
+            <span class="error" id="confirmError"></span>
+
+            <button type="submit">Sign Up</button>
+            <p id="successMsg"></p>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let password = document.getElementById("password").value;
+            let confirm = document.getElementById("confirm").value;
+
+            let isValid = true;
+
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("phoneError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("confirmError").innerHTML = "";
+            document.getElementById("successMsg").innerHTML = "";
+
+            if (name == "") {
+                document.getElementById("nameError").innerHTML = "Name cannot be empty";
+                isValid = false;
+            } else if (name.length < 3) {
+                document.getElementById("nameError").innerHTML = "Name must be at least 3 letters";
+                isValid = false;
+            }
+
+            if (email == "") {
+                document.getElementById("emailError").innerHTML = "Email cannot be empty";
+                isValid = false;
+            } else if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                document.getElementById("emailError").innerHTML = "Enter a valid email";
+                isValid = false;
+            }
+
+            if (phone == "") {
+                document.getElementById("phoneError").innerHTML = "Phone number cannot be empty";
+                isValid = false;
+            } else if (phone.length != 10 || isNaN(phone)) {
+                document.getElementById("phoneError").innerHTML = "Phone number must be 10 digits";
+                isValid = false;
+            }
+
+            if (password == "") {
+                document.getElementById("passwordError").innerHTML = "Password cannot be empty";
+                isValid = false;
+            } else if (password.length < 6) {
+                document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters";
+                isValid = false;
+            }
+
+            if (confirm == "") {
+                document.getElementById("confirmError").innerHTML = "Please confirm your password";
+                isValid = false;
+            } else if (password != confirm) {
+                document.getElementById("confirmError").innerHTML = "Passwords do not match";
+                isValid = false;
+            }
+
+            if (isValid == true) {
+                document.getElementById("successMsg").innerHTML = "Signup successful!";
+            }
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5ecd7;
+        }
+        .box {
+            background-color: white;
+            width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        #taskInput {
+            width: 260px;
+            padding: 8px;
+        }
+        #message {
+            color: red;
+            font-size: 14px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+        }
+        li.done span {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>My Todo List</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add</button>
+        <p id="message"></p>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        function addTask() {
+            let input = document.getElementById("taskInput");
+            let message = document.getElementById("message");
+            let list = document.getElementById("taskList");
+
+            if (input.value == "") {
+                message.innerHTML = "Please enter a task";
+                return;
+            }
+
+            message.innerHTML = "";
+
+            list.innerHTML += "<li><span>" + input.value + "</span> " +
+                "<button onclick='doneTask(this)'>Done</button> " +
+                "<button onclick='deleteTask(this)'>Delete</button></li>";
+
+            input.value = "";
+        }
+
+        function doneTask(button) {
+            button.parentElement.classList.toggle("done");
+        }
+
+        function deleteTask(button) {
+            button.parentElement.remove();
+        }
+    </script>
+
+</body>
+</html>
